@@ -1,7 +1,4 @@
 import os
-from turtle import clear
-
-
 def board():
     print(" __ __ __")
     print("  |" + a[0][0] + " |" + a[0][1] + " |" + a[0][2] + " |")
@@ -38,7 +35,7 @@ def game() :
             print("Cell is already filled")
             continue
         a[p][q] = "\x1b[31mX\x1b[0m]"
-        os.system('clear')
+        os.system('cls')
         board()
         if isWin("1"):
             break
@@ -61,7 +58,7 @@ def game() :
                 print("Cell is already filled")
                 continue
             a[p][q] = "\x1b[32mO\x1b[0m"
-            os.system('clear')
+            os.system('cls')
             board()
             if isWin("2"):
                 turn = 10
@@ -72,11 +69,11 @@ game()
 while True:
     x = input("Rematch? (y/n): ")
     if x == "y":
-        os.system('clear')
+        os.system('cls')
         a = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
         game()
     elif x == "n" :
-        os.system('clear')
+        os.system('cls')
         exit()
     else:
         print("Please give a valid input")
